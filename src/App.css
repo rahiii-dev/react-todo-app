@@ -1,0 +1,33 @@
+#main {
+  --img-height: 200px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transbg), var(--transtext);
+  padding-bottom: 100px;
+}
+#img-bg {
+  height: var(--img-height);
+  background-image: url("../src/assets/images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: var(--transbg);
+}
+body.dark #img-bg {
+  background-image: url("../src/assets/images/bg-mobile-dark.jpg");
+}
+
+/* media 575 */
+@media screen and (min-width: 575px) {
+  #main {
+    --img-height: 330px;
+  }
+  #img-bg {
+    background-image: url("../src/assets/images/bg-desktop-light.jpg");
+  }
+  body.dark #img-bg {
+    background-image: url("../src/assets/images/bg-desktop-dark.jpg");
+  }
+}
